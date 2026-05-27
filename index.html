@@ -4,7 +4,6 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>115年 5/24~7/31 行事曆與旅遊安排建議</title>
-
 <style>
 *{box-sizing:border-box}
 body{
@@ -13,13 +12,11 @@ body{
   background:#f4f7fb;
   color:#222;
 }
-
 .wrapper{
   max-width:1500px;
   margin:auto;
   padding:20px;
 }
-
 .title{
   text-align:center;
   font-size:52px;
@@ -27,28 +24,23 @@ body{
   color:#123ea8;
   margin-bottom:8px;
 }
-
 .subtitle{
   text-align:center;
   font-size:26px;
   font-weight:700;
   margin-bottom:20px;
 }
-
 .layout{
   display:grid;
   grid-template-columns:1fr 360px;
   gap:20px;
 }
-
-/* ===== Calendar ===== */
 .calendar-section{
   background:#fff;
   border-radius:24px;
   padding:20px;
   box-shadow:0 6px 20px rgba(0,0,0,.08);
 }
-
 .month-title{
   font-size:40px;
   font-weight:900;
@@ -58,12 +50,7 @@ body{
   border-radius:18px;
   display:inline-block;
   margin:30px 0 14px;
-
-  position: sticky;
-  top: 0;
-  z-index: 50;
 }
-
 .calendar-grid{
   display:grid;
   grid-template-columns:repeat(7,1fr);
@@ -71,7 +58,6 @@ body{
   overflow:hidden;
   border-radius:18px;
 }
-
 .day-header{
   background:#2d53c9;
   color:#fff;
@@ -79,40 +65,31 @@ body{
   padding:12px 0;
   font-size:26px;
   font-weight:900;
+  border-right:1px solid rgba(255,255,255,.2);
 }
-
 .cell{
   min-height:120px;
   border-right:1px solid #d9dfeb;
   border-top:1px solid #d9dfeb;
   padding:8px;
-  background:#fff;
   position:relative;
-
-  scroll-snap-align:start;
+  background:#fff;
 }
-
 .cell:nth-child(7n){border-right:none}
-
 .date{
   font-size:34px;
   font-weight:900;
 }
-
 .week{
   font-size:18px;
   font-weight:700;
 }
-
 .sun .date,.sun .week{color:#d81b1b}
 .sat .date,.sat .week{color:#1844c9}
-
 .other-month{
   background:#f3f4f8;
   color:#aaa;
 }
-
-/* event */
 .event{
   margin-top:6px;
   border-radius:12px;
@@ -122,7 +99,6 @@ body{
   line-height:1.35;
   color:#fff;
 }
-
 .orange{background:#ff7b00}
 .green{background:#23a33b}
 .blue{background:#2563eb}
@@ -131,27 +107,22 @@ body{
 .pink{background:#ec4899}
 .teal{background:#14b8a6}
 .red{background:#ef4444}
-
-/* ===== Sidebar ===== */
 .sidebar{
   display:flex;
   flex-direction:column;
   gap:20px;
 }
-
 .panel{
   background:#fff;
   border-radius:24px;
   padding:20px;
   box-shadow:0 6px 20px rgba(0,0,0,.08);
 }
-
 .panel h3{
   margin-top:0;
   font-size:34px;
   color:#163ca8;
 }
-
 .legend-item{
   display:flex;
   align-items:center;
@@ -160,13 +131,11 @@ body{
   font-size:22px;
   font-weight:700;
 }
-
 .dot{
   width:20px;
   height:20px;
   border-radius:6px;
 }
-
 .travel-box{
   margin-top:30px;
   background:#fff;
@@ -174,141 +143,351 @@ body{
   padding:20px;
   box-shadow:0 6px 20px rgba(0,0,0,.08);
 }
-
 .travel-title{
   font-size:38px;
   color:#1c8a2e;
   font-weight:900;
   margin-bottom:18px;
 }
-
 .travel-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:16px;
 }
-
 .travel-item{
   border:3px solid #b9e5be;
   border-radius:20px;
   padding:18px;
   background:#f8fff9;
 }
-
 .travel-item h4{
   margin:0 0 10px;
   font-size:30px;
   color:#1f7f31;
 }
-
 .travel-item p{
   margin:0;
   font-size:22px;
+  line-height:1.5;
 }
-
-/* ===== Mobile ===== */
-@media(max-width:768px){
-
+.note{
+  margin-top:24px;
+  background:#fff3f3;
+  border:3px solid #ffb6b6;
+  border-radius:20px;
+  padding:18px;
+  font-size:26px;
+  color:#c62828;
+  font-weight:900;
+  text-align:center;
+}
+@media(max-width:1200px){
   .layout{
     grid-template-columns:1fr;
   }
 
-  .calendar-section{
-    padding:14px;
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
+  .sidebar{
+    order:-1;
   }
 
-  .calendar-grid{
-    min-width:720px;
-    scroll-snap-type:x mandatory;
+  .travel-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+  body{
+    background:#eef3fb;
+  }
+
+  .wrapper{
+    padding:10px;
+  }
+
+  .title{
+    font-size:32px;
+    line-height:1.25;
+    margin-bottom:6px;
+  }
+
+  .subtitle{
+    font-size:18px;
+    margin-bottom:14px;
+  }
+
+  .calendar-section,
+  .panel,
+  .travel-box{
+    border-radius:18px;
+    padding:14px;
   }
 
   .month-title{
-    font-size:28px;
     width:100%;
     text-align:center;
+    font-size:28px;
+    padding:10px;
     margin:20px 0 10px;
+    border-radius:14px;
   }
 
-  .title{font-size:32px}
-  .subtitle{font-size:18px}
+  .calendar-grid{
+    min-width:780px;
+  }
 
-  .day-header{font-size:18px}
-  .date{font-size:24px}
+  .calendar-section{
+    overflow-x:auto;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:8px;
+  }
+
+  .calendar-section::-webkit-scrollbar{
+    height:8px;
+  }
+
+  .calendar-section::-webkit-scrollbar-thumb{
+    background:#b8c7ea;
+    border-radius:20px;
+  }
+
+  .day-header{
+    font-size:18px;
+    padding:10px 0;
+  }
 
   .cell{
     min-height:100px;
+    padding:6px;
+  }
+
+  .date{
+    font-size:24px;
+  }
+
+  .week{
+    font-size:13px;
   }
 
   .event{
     font-size:12px;
+    padding:4px 6px;
+    border-radius:8px;
+    line-height:1.3;
+    margin-top:4px;
+  }
+
+  .panel h3{
+    font-size:24px;
+    margin-bottom:14px;
+  }
+
+  .legend-item{
+    font-size:16px;
+    align-items:flex-start;
+    line-height:1.5;
+    margin-bottom:10px;
+  }
+
+  .dot{
+    width:14px;
+    height:14px;
+    margin-top:4px;
+    flex-shrink:0;
+  }
+
+  .travel-title{
+    font-size:26px;
+    line-height:1.4;
   }
 
   .travel-grid{
     grid-template-columns:1fr;
   }
 
-  .panel h3{
-    font-size:24px;
+  .travel-item{
+    padding:14px;
+    border-radius:16px;
+  }
+
+  .travel-item h4{
+    font-size:22px;
+    line-height:1.4;
+  }
+
+  .travel-item p{
+    font-size:16px;
+    line-height:1.6;
+  }
+
+  .note{
+    font-size:18px;
+    line-height:1.7;
+    padding:14px;
+    border-radius:16px;
+  }
+
+  .sidebar{
+    gap:14px;
+  }
+
+  .panel{
+    overflow:hidden;
+  }
+
+  .legend-item{
+    word-break:break-word;
+  }
+
+  .travel-item,
+  .panel,
+  .note{
+    box-shadow:0 3px 10px rgba(0,0,0,.06);
+  }
+
+  .layout{
+    gap:14px;
+  }
+}
+
+@media(max-width:600px){
+  .calendar-grid{
+    min-width:620px;
+  }
+
+  .cell{
+    min-height:84px;
+  }
+
+  .event{
+    font-size:10px;
+    padding:3px 5px;
+  }
+
+  .legend-item{
+    font-size:15px;
   }
 }
 
 @media(max-width:480px){
-  .calendar-grid{min-width:640px}
-  .cell{min-height:90px}
-  .date{font-size:20px}
+  .title{
+    font-size:26px;
+  }
+
+  .subtitle{
+    font-size:16px;
+  }
+
+  .month-title{
+    font-size:24px;
+  }
+
+  .calendar-grid{
+    min-width:680px;
+  }
+
+  .cell{
+    min-height:90px;
+  }
+
+  .date{
+    font-size:20px;
+  }
+
+  .event{
+    font-size:11px;
+  }
+
+  .panel h3{
+    font-size:22px;
+  }
+
+  .travel-title{
+    font-size:22px;
+  }
+
+  .note{
+    font-size:16px;
+  }
 }
 </style>
 </head>
-
 <body>
 <div class="wrapper">
-
   <div class="title">5/24～7/31 行事曆 ＆ 旅遊安排建議</div>
   <div class="subtitle">115年（台灣時間）</div>
 
   <div class="layout">
-
     <div class="calendar-section">
       <div id="calendar"></div>
 
       <div class="travel-box">
-        <div class="travel-title">可安排旅遊建議時段</div>
-
+        <div class="travel-title">可安排旅遊建議時段（六日一 / 五六日）</div>
         <div class="travel-grid">
           <div class="travel-item">
-            <h4>① 5/24～5/26</h4>
-            <p>五月底空檔</p>
+            <h4>① 5/24(六)～5/26(一)</h4>
+            <p>五月底最佳空檔，尚未進入期末考與大型賽事。</p>
           </div>
 
           <div class="travel-item">
-            <h4>② 6/27～6/29</h4>
-            <p>避免晉級與林運盃</p>
+            <h4>② 6/27(五)～6/29(日)</h4>
+            <p>6/27 晉級測驗、6/28 林運盃，建議避免安排旅遊。</p>
           </div>
 
           <div class="travel-item">
-            <h4>③ 7/18～7/20</h4>
-            <p>暑期較輕鬆</p>
+            <h4>③ 7/18(五)～7/20(日)</h4>
+            <p>議長盃結束後，暑期行程壓力較小。</p>
+          </div>
+
+          <div class="travel-item">
+            <h4>④ 7/25(五)～7/27(日)</h4>
+            <p>七月底相對空檔，適合家庭旅遊。</p>
           </div>
         </div>
+
+        <div class="note">
+          ⚠ 建議避開 6/16～6/24 各校期末考期間、6/27 晉級測驗、6/28 林運盃，以及 6/9～6/13（全少跆拳道錦標賽）與 7/3～7/8（全國品勢）重要賽事期間，避免影響考試與比賽安排。
+        </div>
+
+        
       </div>
     </div>
 
     <div class="sidebar">
-
       <div class="panel">
         <h3>行事曆圖例</h3>
-        <div class="legend-item"><div class="dot blue"></div> 期末考</div>
-        <div class="legend-item"><div class="dot green"></div> 安和</div>
-        <div class="legend-item"><div class="dot orange"></div> 樂利</div>
+        <div class="legend-item"><div class="dot blue"></div> 土城國小期末考</div>
+        <div class="legend-item"><div class="dot green"></div> 安和國小期末考</div>
+        <div class="legend-item"><div class="dot orange"></div> 樂利國小期末考</div>
         <div class="legend-item"><div class="dot purple"></div> 集訓</div>
-        <div class="legend-item"><div class="dot yellow"></div> 全少賽</div>
+        <div class="legend-item"><div class="dot yellow"></div> 全少跆拳道錦標賽</div>
+        <div class="legend-item"><div class="dot blue"></div> 全國品勢</div>
         <div class="legend-item"><div class="dot pink"></div> 議長盃</div>
         <div class="legend-item"><div class="dot teal"></div> 夏令營</div>
-        <div class="legend-item"><div class="dot red"></div> 泰國營</div>
+        <div class="legend-item"><div class="dot red"></div> 泰國教練訓練營</div>
       </div>
 
+      <div class="panel">
+        <h3>重點事件</h3>
+        <div class="legend-item">📘 土城國小：6/23(一)、6/24(二)</div>
+        <div class="legend-item">📗 安和國小：6/17(二)、6/18(三)</div>
+        <div class="legend-item">📙 樂利國小：6/16(一)、6/17(二)</div>
+        <div class="legend-item">🟪 集訓：5/30(五)、5/31(六)、6/6(五)</div>
+        <div class="legend-item">📋 晉級測驗：6/27(五)</div>
+        <div class="legend-item">🏅 林運盃：6/28(六)</div>
+        <div class="legend-item">🥋 全少跆拳道：6/9(一)～6/13(五)</div>
+        <div class="legend-item">🏆 全國品勢：7/3(四)～7/8(二)</div>
+        <div class="legend-item">🏕 夏令營：7/6(日)～7/19(六)</div>
+        <div class="legend-item">🇹🇭 泰國教練訓練營：7/1(二)～7/5(六)</div>
+        <div class="legend-item">🎖 議長盃：7/10(四)～7/13(日)</div>
+      </div>
+
+      <div class="panel">
+        <h3>安排建議</h3>
+        <div class="legend-item">✅ 避開期末考與大型賽事</div>
+        <div class="legend-item">✅ 優先安排六日一或五六日</div>
+        <div class="legend-item">✅ 提早預訂住宿與交通</div>
+      </div>
     </div>
   </div>
 </div>
@@ -316,71 +495,142 @@ body{
 <script>
 const events = {
   '2026-05-30': [{text:'集訓', cls:'purple'}],
-  '2026-06-09': [{text:'全少賽', cls:'yellow'}],
-  '2026-06-17': [{text:'期末考', cls:'green'}],
-  '2026-06-27': [{text:'晉級', cls:'purple'}],
+  '2026-05-31': [{text:'集訓', cls:'purple'}],
+  '2026-06-06': [{text:'集訓', cls:'purple'}],
+
+  '2026-06-09': [{text:'全少跆拳道錦標賽', cls:'yellow'}],
+  '2026-06-10': [{text:'全少跆拳道錦標賽', cls:'yellow'}],
+  '2026-06-11': [{text:'全少跆拳道錦標賽', cls:'yellow'}],
+  '2026-06-12': [{text:'全少跆拳道錦標賽', cls:'yellow'}],
+  '2026-06-13': [{text:'全少跆拳道錦標賽', cls:'yellow'}],
+
+  '2026-06-16': [{text:'樂利國小期末考', cls:'orange'}],
+  '2026-06-17': [
+    {text:'樂利國小期末考', cls:'orange'},
+    {text:'安和國小期末考', cls:'green'}
+  ],
+  '2026-06-18': [{text:'安和國小期末考', cls:'green'}],
+
+  '2026-06-23': [{text:'土城國小期末考', cls:'blue'}],
+  '2026-06-24': [{text:'土城國小期末考', cls:'blue'}],
+
+  '2026-06-27': [{text:'晉級測驗', cls:'purple'}],
   '2026-06-28': [{text:'林運盃', cls:'red'}],
-  '2026-07-03': [{text:'品勢', cls:'blue'}],
-  '2026-07-10': [{text:'議長盃', cls:'pink'}],
+
+  '2026-07-01': [{text:'泰國教練訓練營', cls:'red'}],
+  '2026-07-02': [{text:'泰國教練訓練營', cls:'red'}],
+  '2026-07-03': [
+    {text:'泰國教練訓練營', cls:'red'},
+    {text:'全國品勢', cls:'blue'}
+  ],
+  '2026-07-04': [
+    {text:'泰國教練訓練營', cls:'red'},
+    {text:'全國品勢', cls:'blue'}
+  ],
+  '2026-07-05': [
+    {text:'泰國教練訓練營', cls:'red'},
+    {text:'全國品勢', cls:'blue'}
+  ],
+  '2026-07-06': [
+    {text:'全國品勢', cls:'blue'},
+    {text:'夏令營', cls:'teal'}
+  ],
+  '2026-07-07': [
+    {text:'全國品勢', cls:'blue'},
+    {text:'夏令營', cls:'teal'}
+  ],
+  '2026-07-08': [
+    {text:'全國品勢', cls:'blue'},
+    {text:'夏令營', cls:'teal'}
+  ],
+
+  '2026-07-09': [{text:'夏令營', cls:'teal'}],
+  '2026-07-10': [
+    {text:'夏令營', cls:'teal'},
+    {text:'議長盃', cls:'pink'}
+  ],
+  '2026-07-11': [
+    {text:'夏令營', cls:'teal'},
+    {text:'議長盃', cls:'pink'}
+  ],
+  '2026-07-12': [
+    {text:'夏令營', cls:'teal'},
+    {text:'議長盃', cls:'pink'}
+  ],
+  '2026-07-13': [{text:'夏令營', cls:'teal'}],
+  '2026-07-14': [{text:'夏令營', cls:'teal'}],
+  '2026-07-15': [{text:'夏令營', cls:'teal'}],
+  '2026-07-16': [{text:'夏令營', cls:'teal'}],
+  '2026-07-17': [{text:'夏令營', cls:'teal'}],
+  '2026-07-18': [{text:'夏令營', cls:'teal'}],
+  '2026-07-19': [{text:'夏令營結束', cls:'teal'}],
 };
 
-const months=[
-  {year:2026,month:4,label:'115年 5月'},
-  {year:2026,month:5,label:'115年 6月'},
-  {year:2026,month:6,label:'115年 7月'}
+const months = [
+  {year:2026, month:4, label:'115年 5月'},
+  {year:2026, month:5, label:'115年 6月'},
+  {year:2026, month:6, label:'115年 7月'}
 ];
 
-const week=['日','一','二','三','四','五','六'];
-const calendar=document.getElementById('calendar');
+const weekNames=['日','一','二','三','四','五','六'];
+const calendar = document.getElementById('calendar');
 
 months.forEach(m=>{
-  const wrap=document.createElement('div');
+  const monthWrap=document.createElement('div');
 
   const title=document.createElement('div');
   title.className='month-title';
   title.textContent=m.label;
-  wrap.appendChild(title);
+  monthWrap.appendChild(title);
 
   const grid=document.createElement('div');
   grid.className='calendar-grid';
 
-  week.forEach(w=>{
+  weekNames.forEach(w=>{
     const h=document.createElement('div');
     h.className='day-header';
     h.textContent=w;
     grid.appendChild(h);
   });
 
-  const start=new Date(m.year,m.month,1);
-  const end=new Date(m.year,m.month+1,0);
+  const firstDay=new Date(m.year,m.month,1);
+  const lastDay=new Date(m.year,m.month+1,0);
 
-  const s=new Date(start);
-  s.setDate(1-start.getDay());
+  const start=new Date(firstDay);
+  start.setDate(1-firstDay.getDay());
 
-  const e=new Date(end);
-  e.setDate(end.getDate()+(6-end.getDay()));
+  const end=new Date(lastDay);
+  end.setDate(lastDay.getDate()+(6-lastDay.getDay()));
 
-  for(let d=new Date(s);d<=e;d.setDate(d.getDate()+1)){
+  for(let d=new Date(start); d<=end; d.setDate(d.getDate()+1)){
+    if(m.month===4 && d < new Date(2026,4,24)) continue;
+    if(m.month===6 && d > new Date(2026,6,31)) continue;
 
     const cell=document.createElement('div');
+    const day=d.getDay();
     cell.className='cell';
 
-    if(d.getDay()==0) cell.classList.add('sun');
-    if(d.getDay()==6) cell.classList.add('sat');
+    if(day===0) cell.classList.add('sun');
+    if(day===6) cell.classList.add('sat');
 
-    if(d.getMonth()!=m.month) cell.classList.add('other-month');
+    if(d.getMonth()!==m.month){
+      cell.classList.add('other-month');
+    }
 
-    const key=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    const yyyy=d.getFullYear();
+    const mm=String(d.getMonth()+1).padStart(2,'0');
+    const dd=String(d.getDate()).padStart(2,'0');
+    const key=`${yyyy}-${mm}-${dd}`;
 
     cell.innerHTML=`
       <div class="date">${d.getDate()}</div>
-      <div class="week">星期${week[d.getDay()]}</div>
+      <div class="week">星期${weekNames[day]}</div>
     `;
 
     if(events[key]){
       events[key].forEach(ev=>{
         const div=document.createElement('div');
-        div.className='event '+ev.cls;
+        div.className=`event ${ev.cls}`;
         div.textContent=ev.text;
         cell.appendChild(div);
       });
@@ -389,10 +639,9 @@ months.forEach(m=>{
     grid.appendChild(cell);
   }
 
-  wrap.appendChild(grid);
-  calendar.appendChild(wrap);
+  monthWrap.appendChild(grid);
+  calendar.appendChild(monthWrap);
 });
 </script>
-
 </body>
 </html>
