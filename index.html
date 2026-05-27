@@ -237,7 +237,18 @@ body{
 
   .calendar-section{
     overflow-x:auto;
+    overflow-y:hidden;
     -webkit-overflow-scrolling:touch;
+    padding-bottom:8px;
+  }
+
+  .calendar-section::-webkit-scrollbar{
+    height:8px;
+  }
+
+  .calendar-section::-webkit-scrollbar-thumb{
+    background:#b8c7ea;
+    border-radius:20px;
   }
 
   .day-header{
@@ -318,6 +329,43 @@ body{
 
   .sidebar{
     gap:14px;
+  }
+
+  .panel{
+    overflow:hidden;
+  }
+
+  .legend-item{
+    word-break:break-word;
+  }
+
+  .travel-item,
+  .panel,
+  .note{
+    box-shadow:0 3px 10px rgba(0,0,0,.06);
+  }
+
+  .layout{
+    gap:14px;
+  }
+}
+
+@media(max-width:600px){
+  .calendar-grid{
+    min-width:620px;
+  }
+
+  .cell{
+    min-height:84px;
+  }
+
+  .event{
+    font-size:10px;
+    padding:3px 5px;
+  }
+
+  .legend-item{
+    font-size:15px;
   }
 }
 
@@ -401,9 +449,7 @@ body{
           ⚠ 建議避開 6/16～6/24 各校期末考期間、6/27 晉級測驗、6/28 林運盃，以及 6/9～6/13（全少跆拳道錦標賽）與 7/3～7/8（全國品勢）重要賽事期間，避免影響考試與比賽安排。
         </div>
 
-        <div class="note"
-          ⚠ 6/9～6/13（全少跆拳道錦標賽）與 7/3～7/8（全國品勢）為重要賽事期間，建議避免安排旅遊。
-        </div>
+        
       </div>
     </div>
 
